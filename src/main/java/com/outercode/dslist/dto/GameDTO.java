@@ -1,11 +1,7 @@
 package com.outercode.dslist.dto;
 
-import com.fasterxml.jackson.databind.util.BeanUtil;
+
 import com.outercode.dslist.entities.Game;
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import org.springframework.beans.BeanUtils;
 
 public class GameDTO {
