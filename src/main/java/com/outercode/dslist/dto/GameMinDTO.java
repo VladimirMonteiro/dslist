@@ -1,6 +1,7 @@
 package com.outercode.dslist.dto;
 
 import com.outercode.dslist.entities.Game;
+import com.outercode.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -8,7 +9,8 @@ public class GameMinDTO {
     private Long id;
     private String title;
     private Integer year;
-    private String longDescription;
+    private String imgUrl;
+    private String shortDescription;
 
     public GameMinDTO() {
     }
@@ -17,7 +19,16 @@ public class GameMinDTO {
         this.id = entity.getId();
         this.title = entity.getTitle();
         this.year = entity.getYear();
-        this.longDescription = entity.getLongDescription();
+        this.imgUrl = entity.getImageUrl();
+        this.shortDescription = entity.getShortDescription();
+    }
+
+    public GameMinDTO(GameMinProjection entity) {
+        this.id = entity.getId();
+        this.title = entity.getTitle();
+        this.year = entity.getGameYear();
+        this.shortDescription = entity.getShortDescription();
+
     }
 
     public Long getId() {
@@ -32,8 +43,8 @@ public class GameMinDTO {
         return year;
     }
 
-    public String getLongDescription() {
-        return longDescription;
+    public String getshortDescription() {
+        return shortDescription;
     }
 
 
